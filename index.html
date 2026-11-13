@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF7F2">
+  <meta name="description" content="A little apology, made with love and a little guilt.">
+  <title>An apology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#intro" aria-label="Apology, start" data-home-link>
+        <span class="wordmark-mark" aria-hidden="true">a.</span>
+        <span>A START</span>
+      </a>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="Mute sound effects">
+        <span class="sound-icon" aria-hidden="true">♪</span>
+        <span id="soundLabel">Sound on</span>
+      </button>
+    </header>
+
+    <main id="mainContent">
+      <!-- Screen 1: Introduction -->
+      <section class="screen intro-screen is-active" id="intro" aria-labelledby="introTitle">
+        <div class="intro-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-line"></span></p>
+          <div class="hero-ornament" aria-hidden="true">
+            <span class="ornament-star">✳</span>
+            <span class="ornament-heart">♡</span>
+            <span class="ornament-star ornament-star-small">✳</span>
+          </div>
+          <h1 id="introTitle">Hey<em>.</em></h1>
+          <p class="intro-copy">I’d really like you to read this</p>
+          <button class="button button-primary" id="openLetterButton" type="button">
+            Open my letter <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="handwritten intro-footnote">Made with love,guilt and the sorry excuses of one loser.</p>
+        </div>
+        <div class="intro-bottom-note" aria-hidden="true">A note from someone who cares</div>
+      </section>
+
+      <!-- Screen 2: Apology letter -->
+      <section class="screen letter-screen" id="letter" aria-labelledby="letterTitle" hidden>
+        <div class="letter-wrap">
+          <div class="letter-topline">
+            <span class="eyebrow">A NOTE FROM THE HEART</span>
+            <span class="letter-date" id="letterDate">Written with care</span>
+          </div>
+          <article class="letter-paper">
+            <div class="letter-paper-inner">
+              <p class="letter-salutation">Vicky,</p>
+              <h2 class="letter-heading" id="letterTitle">I owe you<br><em>more than just this apology.</em></h2>
+              <div class="letter-body">
+                <p>I let my insecurities get the better of me. I jumped to the worst possible conclusion and treated my fear as though it were a fact.</p>
+                <p>That wasn’t fair to you.</p>
+                <p>You shouldn’t have to defend yourself against assumptions I’ve created in my own head. I should have communicated how I was feeling instead of accusing you.</p>
+                <p>I’m sorry for making you feel mistrusted and for hurting you.</p>
+                <p>I never want you to feel like you constantly have to prove your loyalty to me. I want you to feel loved, trusted, respected and comfortable being yourself.</p>
+                <p>I know an apology wont’t automatically fix things. I also know that making this doesn’t undo what happened.</p>
+                <p>But I want you to know that I recognise where I went wrong, and I genuinely want to work on myself and become better.</p>
+                <p>You mean so much to me.</p>
+                <p>I’m sorry.</p>
+              </div>
+              <div class="letter-signoff">
+                <span>With love,</span>
+                <span class="signature handwritten">Your very apologetic idiot.</span>
+              </div>
+              <div class="letter-divider" aria-hidden="true"><span></span><i>♡</i><span></span></div>
+              <div class="letter-next">
+                <p>There’s just one more thing…</p>
+                <button class="button button-primary" id="toRevealButton" type="button">
+                  Let’s laugh at the loser <span aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <button class="text-button back-button" type="button" data-go="intro">← Back to the beginning</button>
+        </div>
+      </section>
+
+      <!-- Screen 3: Suspense and photo reveal -->
+      <section class="screen reveal-screen" id="reveal" aria-labelledby="revealTitle" hidden>
+        <div class="section-heading reveal-heading">
+          <p class="eyebrow">THE MOMENT OF TRUTH</p>
+          <h2 id="revealTitle">Before we <em>continue…</em></h2>
+          <p>I’ve prepared a sacrifice.</p>
+        </div>
+        <div class="reveal-card" id="revealCard">
+          <div class="reveal-curtain" id="revealCurtain">
+            <div class="curtain-seal" aria-hidden="true">!</div>
+            <p class="curtain-kicker">ONE SMALL DISCLAIMER</p>
+            <p class="curtain-copy">The following person has been found guilty of being an idiot.</p>
+            <button class="button button-primary" id="revealButton" type="button">Reveal the culprit <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="countdown-panel" id="countdownPanel" aria-live="assertive" aria-atomic="true" hidden>
+            <span class="countdown-caption">PREPARING THE CULPRIT</span>
+            <span class="countdown-number" id="countdownNumber">3</span>
+            <span class="countdown-subcaption">Please direct all tomatoes to the idiot.</span>
+          </div>
+          <div class="revealed-person" id="revealedPerson" hidden>
+            <div class="photo-frame reveal-photo-frame" data-photo-frame>
+              <div class="photo-placeholder" data-photo-placeholder>
+                <span class="placeholder-monogram">ME</span>
+                <span class="placeholder-title">photo goes here</span>
+                <span class="placeholder-path">assets/images/me.jpg</span>
+              </div>
+              <img class="portrait-image" data-portrait alt="The very apologetic boyfriend" decoding="async">
+            </div>
+            <p class="photo-caption">The person responsible for today’s nonsense.</p>
+            <button class="button button-primary" id="toGameButton" type="button">END HIM <span aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <button class="text-button back-button" type="button" data-go="letter">← Back to letter</button>
+      </section>
+
+      <!-- Screen 4: Tomato game -->
+      <section class="screen game-screen" id="game" aria-labelledby="gameTitle" hidden>
+        <div class="section-heading game-heading">
+          <p class="eyebrow">HAVE YOUR WAY DICTATOR</p>
+          <h2 id="gameTitle">Go <em>ahead</em></h2>
+          <p>Crucify him.</p>
+        </div>
+
+        <div class="game-panel">
+          <div class="game-status-row">
+            <div class="tomato-counter" aria-live="polite" aria-atomic="true">
+              <span class="counter-icon" aria-hidden="true">🍅</span>
+              <span>Tomatoes received:</span>
+              <strong id="tomatoCount">0</strong>
+            </div>
+            <button class="text-button reset-button" id="resetGameButton" type="button">↻ Reset</button>
+          </div>
+
+          <div class="game-arena" id="gameArena">
+            <div class="target-card" id="targetCard">
+              <div class="photo-frame game-photo-frame" id="gamePhotoFrame" data-photo-frame>
+                <div class="photo-placeholder" data-photo-placeholder>
+                  <span class="placeholder-monogram">ME</span>
+                  <span class="placeholder-title">Your photo goes here</span>
+                  <span class="placeholder-path">assets/images/me.jpg</span>
+                </div>
+                <img class="portrait-image" data-portrait alt="The tomato-throwing target" decoding="async" loading="lazy">
+                <div class="splatter-layer" id="splatterLayer" aria-hidden="true"></div>
+              </div>
+              <p class="photo-caption">A face that has clearly made some questionable decisions.</p>
+            </div>
+
+            <div class="aim-guide" id="aimGuide" aria-hidden="true"></div>
+            <div class="drag-ghost" id="dragGhost" aria-hidden="true">🍅</div>
+            <div class="projectile-layer" id="projectileLayer" aria-hidden="true"></div>
+
+            <div class="launchpad">
+              <p class="launchpad-label">TAP ANYWHERE TO THROW</p>
+              <div class="tomato-tray" id="tomatoTray" aria-label="Tomato throwing controls">
+                <button class="tomato-launcher" type="button" aria-label="Throw a tomato" title="Tap to throw, or drag to aim">🍅</button>
+                <button class="tomato-launcher" type="button" aria-label="Throw a tomato" title="Tap to throw, or drag to aim">🍅</button>
+                <button class="tomato-launcher" type="button" aria-label="Throw a tomato" title="Tap to throw, or drag to aim">🍅</button>
+                <button class="tomato-launcher" type="button" aria-label="Throw a tomato" title="Tap to throw, or drag to aim">🍅</button>
+                <button class="tomato-launcher" type="button" aria-label="Throw a tomato" title="Tap to throw, or drag to aim">🍅</button>
+              </div>
+              <p class="launch-hint">Tap or click anywhere to throw a tomato, or drag one onto the photo to aim.</p>
+            </div>
+          </div>
+
+          <p class="milestone-message" id="milestoneMessage" aria-live="polite" aria-atomic="true">I’m ready to accept the consequences.</p>
+          <div class="game-footer">
+            <span class="game-footnote">Unlimited tomatoes. Questionable life choices.</span>
+          </div>
+        </div>
+        <button class="text-button back-button" type="button" data-go="reveal">← Back to the culprit</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Made with intention, honesty & a tiny bit of tomato-related shame.</span>
+      <span class="footer-heart" aria-hidden="true">♡</span>
+    </footer>
+  </div>
+</body>
+</html>
